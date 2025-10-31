@@ -12,7 +12,7 @@
         echo "Nome: " . $dados['nome'] . "<br>";
         echo "País: " . $dados['pais'] . "<br>";
         echo "Comentou: <br>" . "''" . $dados['postagem'] . "''" . "<br>";
-        echo " <a href='?pg=post-altera-form&id=$dados[id]'>Alterar</a>";
+        echo " <a href='?pg=posts-altera-form&id=$dados[id]'>Alterar</a>";
         echo " | <a href='?pg=post-excluir&id=$dados[id]'>Excluir</a>";
         echo "<hr>";
     }

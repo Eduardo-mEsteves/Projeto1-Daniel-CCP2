@@ -28,12 +28,21 @@ if (isset($_GET['pg'])) {
             require 'post-cadastro.php';
             break;
 
+        case 'posts-altera-form': 
+            require 'posts-altera-form.php';
+            break;
+
+        case 'post-altera':
+            require 'post-altera.php';
+            break;
+
+        case 'post-excluir':
+            require 'post-excluir.php';
+            break;
+
         default:
             echo "<h2>Página não encontrada!</h2>";
             break;
     }
-} else {
-    // Página padrão (sem ?pg)
-    require 'posts.php';
-}
+} 
 ?>
