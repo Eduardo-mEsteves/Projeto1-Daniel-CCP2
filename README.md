@@ -2,8 +2,8 @@
 
 ## 🗃️ Banco de Dados
 
-O nome do banco de dados deve ser:
--> yorkut
+O nome do banco de dados deve ser:  
+→ **yorkut**
 
 Depois de criar o banco no phpMyAdmin, execute o seguinte comando SQL para criar a tabela necessária:
 
