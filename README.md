@@ -16,6 +16,7 @@ CREATE TABLE posts (
 
 ## 📁 Estrutura do Projeto
 
+```
 PROJETO1-DANIEL-CCP2/
 │
 ├── admin/
@@ -30,3 +31,11 @@ PROJETO1-DANIEL-CCP2/
 │   └── yorkut.css              # Estilos da aplicação
 │
 └── README.md                   # Instruções do projeto
+```
+
+
+
+
+
+
+
