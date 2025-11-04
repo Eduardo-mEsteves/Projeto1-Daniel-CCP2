@@ -1,13 +1,15 @@
-<div>
+<div id="form-container">
+    <h2>Fazer novo post</h2>
+
     <form action="?pg=post-cadastro" method="post">
-        <label>Nome:</label><br>
-        <input type="text" name="nome"><br>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-        <label>País:</label><br>
-        <input type="text" name="pais"><br>
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" required>
 
-        <label>Seu post:</label><br>
-        <textarea name="postagem" required></textarea><br> <br>
+        <label for="postagem">Seu post:</label>
+        <textarea id="postagem" name="postagem" rows="5" required></textarea>
 
         <input type="submit" value="Postar">
     </form>

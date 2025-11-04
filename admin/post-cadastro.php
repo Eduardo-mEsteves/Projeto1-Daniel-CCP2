@@ -16,7 +16,7 @@
 
             if ($inserir) {
                 echo "<h2>Sua postagem foi feita com sucesso!</h2>";
-                echo "<a href='?pg=posts'>Voltar</a>";
+                echo  "<a href='?pg=posts' class='voltar'>Voltar</a>";
             } else {
                 echo "<h2>Erro ao cadastrar cliente.</h2>";
                 echo mysqli_error($conexao);

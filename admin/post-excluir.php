@@ -7,7 +7,7 @@
 
     if(mysqli_query($conexao, $sql)){
         echo "<br><h2>Postagem excluída com sucesso.</h2>";
-        echo "<a href='?pg=posts'>Voltar</a>";
+        echo "<a href='?pg=posts' class='voltar'>Voltar</a>";
     }else{
         echo "<br><h2>Erro ao excluir postagem.</h2>";
         echo "<a href='?pg=post'>Voltar</a>";

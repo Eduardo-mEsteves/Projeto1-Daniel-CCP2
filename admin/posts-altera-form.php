@@ -1,36 +1,38 @@
 <?php
-    require "config.inc.php";
+require "config.inc.php";
 
-    $id = $_REQUEST["id"];
+$id = $_REQUEST["id"];
 
-    $sql = "SELECT * FROM posts WHERE id = '$id'";
-    $resultado = mysqli_query($conexao, $sql);
+$sql = "SELECT * FROM posts WHERE id = '$id'";
+$resultado = mysqli_query($conexao, $sql);
 
-    $resultado = mysqli_query($conexao, $sql);
-    if(mysqli_num_rows($resultado) > 0){
-        while($dados = mysqli_fetch_array($resultado)){
-            $nome = $dados["nome"];
-            $pais = $dados["pais"];
-            $postagem = $dados["postagem"];
-            $id = $dados["id"];
-        }
-
-?>
-<h2>Alteração de dados do cliente</h2>
-<form action="?pg=post-altera" method="post">
-    <input type="hidden" name="id" value="<?=$id?>">
-    <label>Nome:</label>
-    <input type="text" name="nome" value="<?=$nome?>" required><br>
-    <label>País:</label>
-    <input type="text" name="pais" value="<?=$pais?>" required><br>
-    <label>Postagem:</label>
-    <textarea name="postagem" required value="<?=$postagem?>"></textarea><br><br>
-    <input type="submit" value="Cadastrar">
-</form>
-<?php
-}else{
-        echo "<br><h2>Nenhum cliente encontrado</h2>";
+if (mysqli_num_rows($resultado) > 0) {
+    while ($dados = mysqli_fetch_array($resultado)) {
+        $nome = $dados["nome"];
+        $pais = $dados["pais"];
+        $postagem = $dados["postagem"];
+        $id = $dados["id"];
     }
 ?>
+<div id="form-container">
+    <h2>Editar sua postagem</h2>
+    <form action="?pg=post-altera" method="post">
+        <input type="hidden" name="id" value="<?=$id?>">
 
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" value="<?=$nome?>" required>
 
+        <label for="pais">País:</label>
+        <input type="text" name="pais" id="pais" value="<?=$pais?>" required>
+
+        <label for="postagem">Postagem:</label>
+        <textarea name="postagem" id="postagem" required><?=$postagem?></textarea>
+
+        <input type="submit" value="Salvar alterações">
+    </form>
+</div>
+<?php
+} else {
+    echo "<br><h2>Nenhum post encontrado</h2>";
+}
+?>

@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="yorkut.css"> 
+
 <?php 
     require_once 'config.inc.php';
 
@@ -10,8 +12,8 @@
 
     if($resultado = mysqli_query($conexao, $sql)){
         echo "<br><h2>Post alterado com sucesso!</h2><br>";
-        echo "<a href='?pg=posts'>Voltar</a>";
+        echo "<a href='?pg=posts' class='voltar'>Voltar</a>";
     } else {
         echo "<br><h2>Erro ao alterar cliente!</h2><br>";
-        echo "<a href='?pg=posts'>Voltar</a>";
+        echo "<a href='?pg=posts' class='voltar'>Voltar</a>";
     }       

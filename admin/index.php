@@ -1,15 +1,18 @@
-<?php
-echo "<h1>YORKUT - página principal</h1>";
-?>
 
-<nav>
-    <ul>
-        <li><a href="index.php">Início</a></li>
-        <li><a href="?pg=posts">Mostrar postagens</a></li>
-    </ul>
-</nav>
+    <link rel="stylesheet" href="yorkut.css"> 
 
-<hr>
+<div id=cabecalho>
+    <?php
+    echo "<h1>YORKUT</h1>";
+    ?>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.php">🏠 Início</a></li>
+            <li><a href="?pg=posts">📝 Postagens</a></li>
+        </ul>
+    </nav>
+</div>
 
 <?php
 if (isset($_GET['pg'])) {
@@ -45,4 +48,7 @@ if (isset($_GET['pg'])) {
             break;
     }
 } 
+
 ?>
+</body>
+</html>
